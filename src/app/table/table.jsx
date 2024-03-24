@@ -7,7 +7,7 @@ export default function Table() {
     const[change, setchange]=useState([])
   return (
     <div className='container mx-auto px-40 '>
-      <table >
+      <table>
         <thead className='bg-red-600 text-white'>
              <tr>
                 <th>id</th>
@@ -21,7 +21,7 @@ export default function Table() {
                {
                 items.map((val)=>{
                     return(
-                        <tr>
+                        <tr key={val.id}>
                             <td>{val.id}</td>
                             <td className='pl-3'>{val.productName}</td>
                             <td className='pl-3'>{val.productprice}</td>
@@ -54,7 +54,7 @@ export default function Table() {
                {
                 change.map((val)=>{
                     return(
-                        <tr>
+                        <tr key={val.id}>
                             <td>{val.id}</td>
                             <td className='pl-3'>{val.productName}</td>
                             <td className='pl-3'>{val.productprice}</td>
